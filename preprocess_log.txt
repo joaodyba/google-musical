@@ -1,0 +1,4 @@
+Identificadas 1030 músicas sazonais para ignorar.
+
+Total de músicas únicas salvas: 28651
+Total de linhas processadas (depois de remover natalinas): 322363

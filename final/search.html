@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search: Results</title>
+    <link rel="stylesheet" href="style_search.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <form method="GET" action="#" class="search-form-top">
+        <table class="search-table-top">
+            <tbody>
+                <tr>
+                    <td class="logo-cell" rowspan="2">
+                        <a href="main.html"><img src="search_files/Title_Left.gif" width="200" height="78" alt="Google "></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input-cell">
+                        <input type="text" name="q" size="31" maxlength="256" value="" id="search-query-input" class="search-input-field">
+                        <input type="hidden" name="lr" value="">
+                        <input type="hidden" name="safe" value="off">
+                        <input type="submit" name="btnG" value="Google Search" class="button-primary">
+                        <input type="submit" name="btnI" value="I'm Feeling Lucky" class="button-secondary">
+                        <button type="button" id="tag-button-search" title="Adicionar Tags para Pesquisa" class="button-secondary">
+                            <span class="material-icons">sell</span> Tags
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <div class="main-content-wrapper">
+        <div class="search-results-main">
+            <div id="display-query-text"></div>
+            <div id="results-count-time"></div>
+
+            <div id="no-results-message" style="display: none;">Nenhum resultado encontrado.</div>
+            <div id="search-results-container">
+                <!-- Os resultados da pesquisa serão renderizados aqui -->
+            </div>
+
+            <table class="nav-pagination" id="pagination-table">
+                <tbody id="pagination-tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sidebar">
+            <!-- MP3 Player e História do Gênero JUNTOS na Sidebar -->
+            <div id="dedicated-mp3-player-section">
+                <h3 class="sidebar-section-title">MP3 Player</h3>
+                <p id="current-song-info" class="current-song-info-text"></p>
+                <audio id="dedicated-audio-player" src="" preload="none"></audio>
+                <button id="dedicated-play-button" class="player-action-button">▶️ Tocar Snippet (5s)</button>
+                
+                <!-- NOVO: História do Gênero movida para dentro da seção do player -->
+                <div id="genre-history-content" class="history-content">
+                    Selecione uma música para ver a história do seu gênero aqui.
+                </div>
+            </div>
+            
+            <!-- REMOVIDO: Antiga seção separada da História do Gênero -->
+        </div>
+    </div>
+
+    <div class="search-form-bottom-container">
+        <form method="GET" action="#" class="search-form-bottom">
+            <input type="text" name="q" size="31" maxlength="256" value="" id="bottom-search-input" class="search-input-field">
+            <input type="hidden" name="lr" value="">
+            <input type="submit" name="btnG" value="Google Search" class="button-primary">
+            <input type="submit" name="btnI" value="I'm Feeling Lucky" class="button-secondary">
+        </form>
+        <div class="search-within-results-link">
+        </div>
+    </div>
+
+
+    <div class="footer-links-container">
+        <span class="copyright-text">2025 CMC</span>
+    </div>
+    <script src="search.js"></script>
+</body>
+</html>

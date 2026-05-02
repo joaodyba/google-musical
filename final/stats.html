@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas do Quiz Musical</title>
+    <link rel="stylesheet" href="style_stats.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <main>
+        <div class="logo">
+            <img src="Google_arquivos/logo.gif" width="276" height="110" alt="Google">
+        </div>
+
+        <div id="stats-container">
+            <h2>Estatísticas Globais do Quiz</h2>
+            <div id="loading-message">Carregando estatísticas...</div>
+
+            <!-- Contêiner para organizar os plots em duas regiões -->
+            <div id="charts-section"> 
+                <h2></h2> 
+                <div id="plots-grid-container">
+                    
+                    <div class="plot-item" id="top-songs-plot-item" style="display: none;">
+                        <h3>Músicas Mais Acertadas (Top 5)</h3>
+                        <img id="top-songs-plot" class="stats-plot" alt="Gráfico das Músicas Mais Acertadas">
+                    </div>
+                    
+                    <!-- Seção para o gráfico de Gêneros Mais Acertados -->
+                    <div class="plot-item" id="top-genres-plot-item" style="display: none;">
+                        <h3>Gêneros Mais Acertados (Top 5)</h3>
+                        <img id="top-genres-plot" class="stats-plot" alt="Gráfico dos Gêneros Mais Acertados">
+                    </div>
+                </div>
+            </div>
+
+            <div id="raw-stats-section" style="display: none;">
+                <h3>Estatísticas em Texto (Atualização a cada 10s)</h3>
+                <p>Última atualização: <span id="last-updated">N/A</span></p>
+                
+                <!-- NOVO: Contêiner para organizar as estatísticas de texto em grid/flex -->
+                <div id="raw-stats-grid-container">
+                    <div class="raw-stats-item">
+                        <h4></h4>
+                        <ul id="difficulty-list">
+                        </ul>
+                    </div>
+                    <div class="raw-stats-item">
+                        <h4>Músicas Mais Acertadas (Top 5)</h4>
+                        <ul id="top-songs-list">
+                            <!-- Estatísticas de músicas carregadas por JS -->
+                        </ul>
+                    </div>
+                    <div class="raw-stats-item">
+                        <!-- Lista para Gêneros Mais Acertados -->
+                        <h4>Gêneros Mais Acertados (Top 5)</h4>
+                        <ul id="top-genres-list">
+                            <!-- Estatísticas de gêneros carregadas por JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p id="error-message" class="error-text" style="display: none;"></p>
+        </div>
+    </main>
+
+    <!-- Custom Message Box para alertas (fora do stats-container para flexibilidade) -->
+    <div id="message-box" style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1000;
+        text-align: center;
+        border-radius: 8px;
+        max-width: 80%;
+        min-width: 250px;
+    ">
+        <p id="message-box-text"></p>
+        <button onclick="document.getElementById('message-box').style.display = 'none'" style="
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        ">OK</button>
+    </div>
+
+    <!-- Carrega stats.js como um módulo ES, no final do body para garantir que o DOM está pronto -->
+    <script type="module" src="stats.js"></script>
+</body>
+</html>

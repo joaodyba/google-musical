@@ -1,0 +1,341 @@
+/* style_search.css */
+
+body {
+    font-family: arial, sans-serif;
+    background-color: #ffffff; /* Equivalent to bgcolor="#ffffff" */
+    color: #000000; /* Equivalent to text="#000000" */
+    margin: 8px; /* Default body margin */
+}
+
+a {
+    color: #0000cc; /* Equivalent to link="#0000cc" */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551A8B; /* Equivalent to vlink="#551A8B" */
+}
+
+a:active {
+    color: #ff0000; /* Equivalent to alink="#ff0000" */
+}
+
+/* General table styling for old Google look */
+table {
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Top Search Form Layout */
+.search-form-top {
+    margin-bottom: 10px;
+}
+
+.search-table-top {
+    width: 100%;
+}
+
+.search-table-top .logo-cell {
+    padding: 2px;
+}
+
+.search-table-top .links-cell {
+    text-align: right;
+    white-space: nowrap;
+    padding: 2px;
+}
+
+.links-text {
+    font-size: 10pt;
+    font-family: arial, sans-serif;
+}
+
+.search-table-top .input-cell {
+    text-align: left;
+    padding: 2px;
+}
+
+.search-input-field {
+    border: 1px solid #7e9ac6;
+    font-family: arial, sans-serif;
+    font-size: 10pt;
+    height: 20px; /* Adjust height for better look */
+    padding: 2px 5px; /* Add some padding inside */
+}
+
+.button-primary,
+.button-secondary {
+    font-family: arial, sans-serif;
+    font-size: 10pt;
+    height: 24px;
+    padding: 0 8px;
+    margin-left: 5px; /* Space between buttons */
+    cursor: pointer;
+    border: 1px solid #7e9ac6; /* Standard button border */
+    background-color: #e6e6e6; /* Light grey background */
+    color: #000000; /* Dark text */
+    vertical-align: middle; /* Align with input field */
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+    background-color: #d6d6d6; /* Slightly darker on hover */
+}
+
+/* ------------------------------------------- */
+/* NOVO: Layout Principal (Duas Colunas) */
+/* ------------------------------------------- */
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar para coluna única em telas menores */
+    justify-content: center;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 20px auto; /* Centraliza o wrapper */
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+.search-results-main {
+    flex: 2; /* Ocupa 2 partes do espaço disponível (maior) */
+    min-width: 300px; /* Largura mínima para mobile */
+    max-width: 700px; /* Largura máxima para a coluna de resultados */
+}
+
+.sidebar {
+    flex: 1; /* Ocupa 1 parte do espaço disponível (menor) */
+    min-width: 280px; /* Largura mínima para mobile */
+    max-width: 350px; /* Largura máxima para a sidebar */
+    padding: 15px;
+    background-color: #f8f8f8; /* Fundo claro para a sidebar */
+    border: 1px solid #e0e0e0; /* Borda suave */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar-section-title {
+    font-size: 1.1em;
+    color: #3366cc; /* Azul padrão do Google */
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e6e6e6; /* Separador para o título da seção */
+}
+
+/* ------------------------------------------- */
+/* Estilos para o MP3 Player na Sidebar */
+/* ------------------------------------------- */
+#dedicated-mp3-player-section {
+    margin-bottom: 20px; /* Espaço abaixo do player */
+    text-align: center;
+}
+
+#current-song-info {
+    font-size: 0.95em;
+    color: #5f6368;
+    margin-bottom: 10px;
+}
+
+#dedicated-audio-player {
+    width: 100%;
+    max-width: 250px; /* Limita a largura do player para parecer compacto */
+    margin-bottom: 10px;
+    display: block; /* Garante que o player esteja em sua própria linha */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o player */
+    background-color: #e0e0e0; /* Cor de fundo para o player */
+    border-radius: 5px; /* Cantos levemente arredondados */
+}
+
+.player-action-button {
+    background-color: #4285F4; /* Azul do Google */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Impede que o texto quebre */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Sombra para o botão */
+}
+
+.player-action-button:hover {
+    background-color: #357ae8;
+}
+
+.player-action-button.playing {
+    background-color: #ea4335; /* Vermelho quando tocando */
+}
+
+/* ------------------------------------------- */
+/* Estilos para a História do Gênero na Sidebar */
+/* ------------------------------------------- */
+#genre-history-section {
+    margin-top: 20px; /* Espaço acima da seção de história */
+    padding-top: 15px;
+    border-top: 1px solid #e6e6e6; /* Separador do player */
+}
+
+.history-content {
+    font-size: 0.9em;
+    color: #5f6368; /* Cor de texto padrão do Google */
+    line-height: 1.5;
+}
+
+
+/* ------------------------------------------- */
+/* Estilos de Resultados da Pesquisa (mantidos/ajustados) */
+/* ------------------------------------------- */
+#display-query-text {
+    font-size: 16px;
+    color: #3366cc;
+    margin-bottom: 5px;
+}
+
+#results-count-time {
+    font-size: 13px;
+    color: #808080;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+#no-results-message {
+    font-size: 16px;
+    color: #5f6368;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search-result-item {
+    margin-bottom: 20px; /* Espaço entre os resultados */
+    /* Removidas bordas e fundos para que a sidebar tenha o foco visual */
+    padding-bottom: 15px; /* Apenas padding na parte inferior */
+    border-bottom: 1px dashed #ccc; /* Linha divisória sutil */
+}
+
+.search-result-item:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.search-result-title {
+    font-size: 1.2em; /* Tamanho do título da música */
+    color: #1a0dab; /* Azul de link do Google */
+    display: block; /* Garante que o link ocupe sua própria linha */
+    margin-bottom: 5px;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.search-result-title:hover {
+    text-decoration: underline;
+}
+
+.search-result-genres-styles {
+    font-size: 0.85em;
+    color: #70757a;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Removidos estilos .music-details-container e .audio-player-container individuais */
+/* Removidos estilos .play-snippet-btn */
+
+/* ------------------------------------------- */
+/* Estilos de Paginação e Rodapé (mantidos/ajustados) */
+/* ------------------------------------------- */
+.nav-pagination {
+    margin: 20px auto;
+    width: auto; /* Allow content to dictate width */
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.nav-pagination td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.nav-pagination img {
+    border: 0;
+}
+
+.nav-pagination .pagination-label {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+.nav-pagination a {
+    font-size: 13px;
+    color: black;
+}
+
+.nav-item-current {
+    font-size: 13px;
+    color: #A90A08; /* Specific red color for current page */
+}
+
+.nav-next {
+    font-size: 12pt; /* Equivalent to span.big */
+    color: #0000cc;
+}
+
+/* Bottom Search Form */
+.search-form-bottom-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-form-bottom .search-input-field {
+    /* Uses same style as top input */
+}
+
+.search-within-results-link {
+    font-size: 13px;
+    color: #0000cc;
+}
+
+/* "Try your query on" section */
+.try-query-on-container {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.try-query-on-label {
+    color: #6f6f6f;
+}
+
+.try-query-on-container a {
+    text-decoration: underline;
+    margin: 0 3px;
+}
+
+/* Footer Links */
+.footer-links-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-table {
+    width: auto;
+    margin: 0 auto;
+}
+
+.footer-cell {
+    white-space: nowrap;
+}
+
+.footer-link-item {
+    padding: 0 5px;
+}
+
+.footer-link-item a {
+    text-decoration: underline;
+}
+
+.copyright-text {
+    font-size: 11px;
+    color: #70757a;
+}

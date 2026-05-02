@@ -1,0 +1,194 @@
+/* General Google-like styling */
+html {
+    font-family: Arial, sans-serif;
+    margin-left: 5px;
+    zoom: 0.6;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 5vh;
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto 2vh auto;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 10%;
+    height: auto;
+}
+
+a {
+    color: #00c;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #f00;
+}
+
+/* Header bar */
+#gbar {
+    background-color: #e5ecf9;
+    font-size: 13px;
+    height: 24px;
+    padding-top: 2px;
+    border-bottom: 1px solid #c9d7f1;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#gbar nav {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center;
+    height: 100%;
+}
+
+.gb1 {
+    margin-left: 15px;
+    line-height: 24px; /* Centraliza verticalmente */
+}
+
+.gb1 strong {
+    color: #333;
+}
+
+.gbh {
+    height: 26px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 990;
+}
+
+.gbh.left {
+    background-color: #e5ecf9;
+    left: 0;
+}
+
+.gbh.right {
+    background-color: #e5ecf9;
+    right: 0;
+}
+
+/* Stats Container */
+#stats-container {
+    max-width: 1200px; /* Aumentado para acomodar 2 ou 3 colunas confortavelmente */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 20px;
+    text-align: center; /* Centraliza o título principal */
+}
+
+#loading-message {
+    font-size: 1.1em;
+    color: #5f6368;
+    margin-top: 50px;
+}
+
+/* Estilos para o novo contêiner de grid/flex para os plots */
+#plots-grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os plots */
+    padding: 10px; /* Adiciona um padding ao redor dos plots */
+    margin-top: 20px;
+}
+
+.plot-item {
+    flex: 1 1 calc(50% - 30px); /* Tenta criar duas colunas, ajustando para o gap */
+    min-width: 200px; /* Largura mínima para evitar que os plots fiquem muito pequenos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura total */
+    text-align: center; /* Centraliza o título e a imagem dentro de cada item de plot */
+    padding: 15px;
+    border: 1px solid #e0e0e0; /* Borda sutil para cada seção de plot */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+    max-width: 800px;
+}
+
+.plot-item h3 {
+    color: #1a0dab; /* Cor de título de link do Google */
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.stats-plot {
+    max-width: 100%; /* Garante que a imagem se ajuste ao seu contêiner pai */
+    height: auto;   /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem dentro do seu contêiner */
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#raw-stats-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #cccccc;
+    text-align: left;
+}
+
+#raw-stats-section p {
+    font-size: 0.9em;
+    color: #70757a;
+    margin-bottom: 10px;
+}
+
+#raw-stats-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#raw-stats-section li {
+    background-color: #f0f0f0;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.error-text {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 300px) {
+    #plots-grid-container {
+        flex-direction: column; /* Em telas menores, os plots ficam em uma única coluna */
+        align-items: center;
+    }
+
+    .plot-item {
+        flex: 1 1 50%; /* Ocupa quase toda a largura em telas pequenas */
+        max-width: 300px; /* Limita a largura máxima mesmo em coluna única */
+    }
+}

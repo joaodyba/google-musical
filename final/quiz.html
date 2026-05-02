@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Musical Quiz</title>
+    <link rel="stylesheet" href="style_quiz.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- REMOVIDO: O bloco <script type="module"> de inicialização do Firebase foi movido para quiz.js -->
+</head>
+
+<body>
+    <header id="gbar">
+        <nav>
+            <span class="gb1"><strong>Google Musical Quiz</strong></span>
+            <span class="gb1"><a href="main.html">Voltar para o Início</a></span>
+            <span class="gb1">
+                <div></div>
+            </span>
+        </nav>
+    </header>
+
+    <div class="gbh left"></div>
+    <div class="gbh right"></div>
+
+    <main>
+        <div class="logo">
+            <img src="Google_arquivos/logo.gif" width="276" height="110" alt="Google">
+        </div>
+
+        <div id="quiz-container">
+            <!-- Intro Section -->
+            <div id="quiz-intro" class="quiz-section">
+                <h2>Bem-vindo ao Quiz Musical!</h2>
+                <p>Prepare-se para testar seus conhecimentos musicais. Qual modo de jogo você prefere?</p>
+                <div class="quiz-options">
+                    <button id="exact-match-btn" class="quiz-mode-btn">O que eu escolhi (Exatamente)</button>
+                    <button id="similar-match-btn" class="quiz-mode-btn">O que eu escolhi (Mais ou Menos)</button>
+                    <button id="random-btn" class="quiz-mode-btn">Aleatório</button>
+                </div>
+                <button id="back-to-main-btn" class="quiz-action-btn">Voltar ao Início</button>
+            </div>
+
+            <!-- Explanation Section -->
+            <div id="quiz-explanation" class="quiz-section" style="display: none;">
+                <h2>Entenda o Modo de Jogo</h2>
+                <p id="explanation-text">Detalhes sobre o modo de jogo selecionado.</p>
+                <button id="start-quiz-btn" class="quiz-action-btn">Começar Quiz!</button>
+                <button id="back-to-intro-btn" class="quiz-action-btn">Voltar</button>
+            </div>
+
+            <!-- Quiz Game Section (Infinite Questions) -->
+            <div id="quiz-game" class="quiz-section" style="display: none;">
+                <div id="quiz-header">
+                    <span id="question-counter">Questão 1</span>
+                    <span id="score-display">Pontuação: 0</span>
+                    <span id="difficulty-display">Dificuldade: Fácil</span>
+                </div>
+                <h3 id="question-text">Qual é a música?</h3>
+                <audio id="audio-player" src="" preload="auto"></audio>
+                <button id="play-snippet-btn" class="quiz-action-btn">Tocar 0.1s</button>
+                <button id="more-time-btn" class="quiz-action-btn">Mais tempo (-1 pontos)</button>
+
+                <div id="answers-container" class="answers-grid">
+                    <!-- Answer buttons will be generated here by JavaScript -->
+                </div>
+                <div id="feedback-message"></div>
+                <button id="next-question-btn" class="quiz-action-btn" style="display: none;">Próxima Pergunta</button>
+                <button id="end-quiz-btn" class="quiz-action-btn end-quiz-button">Encerrar Quiz</button>
+            </div>
+
+            <!-- Quiz Results Section -->
+            <div id="quiz-results" class="quiz-section" style="display: none;">
+                <h2>Quiz Concluído!</h2>
+                <p id="final-score"></p>
+                <button id="play-again-btn" class="quiz-action-btn">Começar Novo Quiz</button>
+                <button id="back-to-main-from-results-btn" class="quiz-action-btn">Voltar ao Início</button>
+
+
+            </div>
+        </div>
+    </main>
+    
+    <!-- ESSENCIAL: Carrega quiz.js como um módulo ES, no final do body para garantir que o DOM está pronto -->
+    <script type="module" src="quiz.js"></script>
+    
+    <!-- Custom Message Box for alerts (mantido) -->
+    <div id="message-box" style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1000;
+        text-align: center;
+        border-radius: 8px;
+        max-width: 80%;
+    ">
+        <p id="message-box-text"></p>
+        <button onclick="document.getElementById('message-box').style.display = 'none'" style="
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        ">OK</button>
+    </div>
+</body>
+</html>

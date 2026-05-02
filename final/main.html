@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Google Musical</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+<body>
+  <header id="gbar">
+    <nav>
+      <span class="gb1"><strong>Google Musical</strong></span>
+      <span class="gb1"><a href="https://cmc.eb.mil.br/" target="_blank">CMC</a></span>
+      <span class="gb1">
+        <div></div>
+      </span>
+    </nav>
+  </header>
+
+  <div class="gbh left"></div>
+  <div class="gbh right"></div>
+
+  <main>
+    <div id="lgpd" class="logo">
+      <img src="Google_arquivos/logo.gif" width="276" height="110">
+    </div>
+
+    <form action="search.html" name="f"> <table class="ts">
+        <tbody>
+          <tr valign="top">
+            <td style="width: 25%;">&nbsp;</td>
+            <td style="text-align: center; white-space: nowrap;">
+              <input name="hl" type="hidden" value="en">
+              <input maxlength="2048" name="q" size="55" placeholder="Qual ano você quer escutar?" id="search-input">
+              <br>
+              <input name="btnG" type="submit" value="Google Search" id="google-search-button"> <button type="button" id="im-feeling-lucky-btn" value="I'm Feeling Lucky">I'm Feeling Lucky</button>
+              <button type="button" id="tag-button" title="Adicionar Tags">
+                <span class="material-icons">
+                  sell
+                </span>
+              </button>
+            </td>
+            <td style="width: 25%;">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <div id="tag-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Gerenciar Tags</h2>
+        <div class="selected-tags" id="selected-tags-display">
+          </div>
+        <input type="text" id="tag-input" placeholder="Buscar tag">
+        <div class="available-tags" id="available-tags-list">
+          </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="creditos">
+    <p style="text-align: center; font-size: 15px;">Dyba - Macanhan - Keller</p>
+    <p style="text-align: center; font-size: 14px;">Orientadora: Professora Tatiane</p>
+  </div>
+
+  <button id="invisible-fullscreen-button" style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none;"></button>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

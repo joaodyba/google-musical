@@ -1,0 +1,9 @@
+version: 2
+authtoken: 21TTzAN30dwFWPtBSugVD7miSEo_7cS4v5j88uoV6fSjcTNKg
+tunnels:
+  site1:
+    addr: 5500
+    proto: http
+  site2:
+    addr: 5000
+    proto: http
