@@ -866,7 +866,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn("[FIREBASE_CONFIG_WARN] __firebase_config é nulo ou vazio. Usando fallback de configuração hardcoded.");
                 // Fallback para uma configuração hardcoded, caso as variáveis do ambiente não estejam disponíveis
                 parsedFirebaseConfig = {
-                   apiKey: "AIzaSyB1pbjSgGNHJdMV8K_CAF1L7xqclmmTW4I",
+                   apiKey: "[]",
                    authDomain: "cmcciencias-fba48.firebaseapp.com",
                    projectId: "cmcciencias-fba48",
                    storageBucket: "cmcciencias-fba48.firebasestorage.app",
