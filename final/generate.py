@@ -89,7 +89,7 @@ Se nenhuma opção for claramente um gênero musical, ou se todas as opções fo
         "generationConfig": generation_config
     }
     
-    apiKey = "AIzaSyA1CHjvaVZLCfnJXthcsSyCwytwIxI77wk" 
+    apiKey = "[]" 
     apiUrl = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}"
 
     try:
