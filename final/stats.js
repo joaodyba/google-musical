@@ -236,13 +236,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn("[FIREBASE_CONFIG_WARN] __firebase_config é nulo ou vazio. Usando fallback de configuração hardcoded.");
                 // Fallback para uma configuração hardcoded, caso as variáveis do ambiente não estejam disponíveis
                 parsedFirebaseConfig = {
-                   apiKey: "AIzaSyB1pbjSgGNHJdMV8K_CAF1L7xqclmmTW4I",
-                   authDomain: "cmcciencias-fba48.firebaseapp.com",
-                   projectId: "cmcciencias-fba48",
-                   storageBucket: "cmcciencias-fba48.firebasestorage.app",
-                   messagingSenderId: "6765700731",
-                   appId: "1:6765700731:web:721b72a007e8f7efe864de",
-                   measurementId: "G-HTHEG0XDPE"
+                   apiKey: "[]",
+                   authDomain: "[]",
+                   projectId: "[]",
+                   storageBucket: "[]",
+                   messagingSenderId: "[]",
+                   appId: "[]",
+                   measurementId: "[]"
                 };
             }
         } catch (e) {
